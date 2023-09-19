@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="Calculator.TripCalculator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#FFF7EFE0" RequestedTheme="Light">
+
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="Auto"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<StackPanel Grid.Row="1" Grid.Column="1">
+			<!--Title-->
+			<TextBlock x:Name="titleTextBlock" Text="Trip Calculator" FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black" FontWeight="Bold" Margin="10"/>
+			<!--Hire Date-->
+			<StackPanel Orientation="Horizontal" Margin="10">
+				<TextBlock Text="Hire Date:" Foreground="Black" FontSize="22" Margin="10"/>
+				<DatePicker x:Name="hireDatePicker" Margin="40,0,0,0" FontSize="20" HorizontalAlignment="Center" Background="White"/>
+				<Button x:Name="todayDateButton" Content="Today's Date" Margin="60,0,0,0" FontSize="20" Click="todayDateButton_Click"/>
+			</StackPanel>
+			<!--Starting Kilometers-->
+			<StackPanel Orientation="Horizontal" Margin="10">
+				<TextBlock Text="Starting Kilometers:" Foreground="Black" FontSize="22" Margin="10"/>
+				<TextBox x:Name="startKmTextBox" VerticalAlignment="Center" FontSize="20" Margin="40,0,0,0" Width="170" FontFamily="Arial" AcceptsReturn="True"/>
+			</StackPanel>
+			<!--Ending Kilometers-->
+			<StackPanel Orientation="Horizontal" Margin="10">
+				<TextBlock Text="Ending Kilometers:" Foreground="Black" FontSize="22" Margin="10"/>
+				<TextBox x:Name="endKmTextBox" FontSize="20" Margin="48,0,0,0" Width="170" FontFamily="Arial" VerticalAlignment="Center" AcceptsReturn="True"/>
+			</StackPanel>
+			<!--Number of Days Hired-->
+			<StackPanel Orientation="Horizontal" Margin="10">
+				<TextBlock Text="Number of Days Hired:" Foreground="Black" FontSize="22" Margin="10"/>
+				<TextBox x:Name="daysHiredTextBox" FontSize="20" Margin="6,0,0,0" Width="170" FontFamily="Arial" VerticalAlignment="Center" AcceptsReturn="True"/>
+			</StackPanel>
+			<!--Price per Day-->
+			<StackPanel Orientation="Horizontal" Margin="10">
+				<TextBlock Text="Price per Day:" Foreground="Black" FontSize="22" Margin="10"/>
+				<TextBox x:Name="pricePerDayTextBox" FontSize="20" Margin="95,0,0,0" Width="170" FontFamily="Arial" VerticalAlignment="Center"/>
+			</StackPanel>
+			<!--Amount to Pay-->
+			<StackPanel Orientation="Horizontal" Margin="10">
+				<TextBlock Text="Amount to Pay:" Foreground="Black" FontSize="22" Margin="10"/>
+				<TextBox x:Name="payAmountTextBox" FontSize="20" Margin="81,0,0,0" Width="170" FontFamily="Arial" VerticalAlignment="Center" IsReadOnly="True"/>
+				<TextBlock x:Name="traveledTextBlock" FontSize="20" Foreground="Black" Margin="10"/>
+			</StackPanel>
+			<!--Buttons-->
+			<StackPanel Orientation="Horizontal" Margin="10">
+				<Button x:Name="calculateButton" Content="Calculate Total" Margin="50,0,0,0" FontSize="20" Width="160" Click="calculateButton_Click"/>
+				<Button x:Name="clearButton" Content="Clear" Margin="60,0,0,0" FontSize="20" Width="160" Click="clearButton_Click"/>
+				<Button x:Name="exitButton" Content="Exit" Margin="60,0,0,0" FontSize="20" Width="160" Click="exitButton_Click"/>
+			</StackPanel>
+		</StackPanel>
+    </Grid>
+</Page>
