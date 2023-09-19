@@ -21,7 +21,9 @@
 			</Grid.RowDefinitions>
 			<StackPanel Orientation="Horizontal">
 				<!--Title-->
-				<TextBlock Grid.Row="0" x:Name="titleTextBlock" TextWrapping="Wrap" Text="Universal Calculator" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" FocusVisualPrimaryBrush="#FF2F21DA" Foreground="#FF0C1988" FontWeight="Bold" Margin="10"/>
+				<!--Image-->
+				<!--Title-->
+				<TextBlock x:Name="titleTextBlock" TextWrapping="Wrap" Text="Universal Calculator" FontSize="40" FocusVisualPrimaryBrush="#FF2F21DA" Foreground="#FF0C1988" FontWeight="Bold" HorizontalAlignment="Center" TextAlignment="Center"/>
 				<!--Image-->
 				<Image Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="76" Width="100" Source="/Assets/abacus.PNG"/>
 			</StackPanel>
@@ -35,6 +37,7 @@
 			<Button Grid.Row="4" x:Name="tripCalcButton" Content="Trip Calculator" Background="#BF656565" FontSize="35" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Foreground="#FF100808" Click="TripCalcButton_Click" Margin="60,10,60,10" Padding="25"/>
 			<!--Exit Calculator-->
 			<Button Grid.Row="5" x:Name="exitButton" Content="Exit" Background="#BF656565" FontSize="35" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Foreground="#FF100808" Click="exitButton_Click" Margin="60,10,60,10" Padding="25"/>
+			<TextBlock x:Name="Developed_By_Rory__Thahn__Shain" HorizontalAlignment="Left" Margin="-247,83,0,0" Grid.Row="5" TextWrapping="Wrap" Text="Developed By Rory, Thahn, Shain" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged"/>
 		</Grid>
 	</Viewbox>
 </Page>

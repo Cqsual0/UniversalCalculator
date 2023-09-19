@@ -50,5 +50,10 @@ namespace Calculator
 		{
 			Application.Current.Exit(); // Close the application
 		}
+
+		private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }
