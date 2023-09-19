@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="Calculator.MainMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+	
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+	<Viewbox Stretch="Uniform">
+		<Grid Background="#B2FFEAD3" Width="Auto">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<StackPanel Orientation="Horizontal">
+				<!--Title-->
+				<TextBlock Grid.Row="0" x:Name="titleTextBlock" TextWrapping="Wrap" Text="Universal Calculator" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" FocusVisualPrimaryBrush="#FF2F21DA" Foreground="#FF0C1988" FontWeight="Bold" Margin="10"/>
+				<!--Image-->
+				<Image Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="76" Width="100" Source="/Assets/abacus.PNG"/>
+			</StackPanel>
+			<!--Maths Calculator-->
+			<Button Grid.Row="1" x:Name="mathCalcButton" Content="Math Calculator" Background="#BF656565" FontSize="35"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Foreground="#FF100808" Click="mathCalcButton_Click" Margin="60,10,60,10" Padding="25"/>
+			<!--Mortgage Calculator-->
+			<Button Grid.Row="2" x:Name="mortgageCalcButton" Content="Mortgage Calculator" Background="#BF656565" FontSize="35" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Foreground="#FF100808" Click="mortgageCalcButton_Click" Margin="60,10,60,10" Padding="25"/>
+			<!--Currency Calculator-->
+			<Button Grid.Row="3" x:Name="currencyCalcButton" Content="Currency Calculator" Background="#BF656565" FontSize="35" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Foreground="#FF100808" Click="currencyCalcButton_Click" Margin="60,10,60,10" Padding="25"/>
+			<!--Currency Calculator-->
+			<Button Grid.Row="4" x:Name="tripCalcButton" Content="Trip Calculator" Background="#BF656565" FontSize="35" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Foreground="#FF100808" Click="TripCalcButton_Click" Margin="60,10,60,10" Padding="25"/>
+			<!--Exit Calculator-->
+			<Button Grid.Row="5" x:Name="exitButton" Content="Exit" Background="#BF656565" FontSize="35" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Foreground="#FF100808" Click="exitButton_Click" Margin="60,10,60,10" Padding="25"/>
+		</Grid>
+	</Viewbox>
+</Page>
